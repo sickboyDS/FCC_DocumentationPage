@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Technical Documentation Page</title>
+</head>
+<body>
+    <nav id="navbar">
+        <header>Dokumentacja JS</header>
+        <ul>
+            <li><a href="#co_to_javascript?" class="nav-link">Co to JavaScript?</a></li>
+            <li><a href="#hello_world" class="nav-link">Hello World</a></li>
+            <li><a href="#komentarze" class="nav-link">Komentarze</a></li>
+            <li><a href="#funkcje" class="nav-link">Funkcje</a></li>
+            <li><a href="#dodawanie_zmieniarki_obrazu" class="nav-link">Dodawanie zmieniarki obrazu</a></li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="co_to_javascript?">
+            <header>Co to JavaScript?</header>
+            <p>JavaScript (w skrócie "JS") jest pełnoprawnym dynamicznym językiem programowania, który po dodaniu do dokumentu HTML, może dostarczyć dynamiczną zawartość do stron internetowych. Został stworzony przez Brendan'a Eich, współtwórcę projektu Mozilla, Mozilla Foundation i Mozilla Corporation.</p>
+            <p>JavaScript jest niezwykle wszechstronny. Możesz zacząć z czymś małym, z karuzelami, galeriami obrazków, zmiennymi układami strony i odpowiedziami na kliknięcia przycisków. Z większym doświadczeniem, będziesz w stanie stworzyć gry, animowane grafiki 2D i 3D, kompleksowe aplikacje oparte na bazach danych i wiele więcej!</p>
+            <p>JavaScript jest dość zwarty, ale jednocześnie bardzo elastyczny. Programiści napisali wiele różnych narzędzi z wykorzystaniem rdzenia języka JavaScript, otwierając mnóstwo dodatkowych funkcjonalności przy minimalnym wysiłku. Obejmują one:</p>
+            <ul>
+                <li>Browser Application Programming Interfaces (APIs) — API wbudowane w przeglądarki internetowe, zapewniające takie funkcjonalności jak dynamiczne tworzenie HTML i ustawianie stylów CSS, zbieranie i manipulowanie strumieniem wideo z kamery internetowej użytkownika lub generowanie grafiki 3D i próbek audio.</li>
+                <li>API innych firm umożliwiające programistom dołączenie do swoich witryn funkcjonalności pochodzących od innych dostawców treści, takich jak Twitter czy Facebook.</li>
+                <li>Frameworki i biblioteki innych firm zewnętrznych, które możesz  wykorzystać w swoim kodzie HTML, by umożliwić sobie szybkie tworzenie witryn i aplikacji internetowych.</li>
+            </ul>
+        </section>
+        <section class="main-section" id="hello_world">
+            <header>Hello World</header>
+            <p>Powyższa sekcja może brzmieć naprawdę ekscytująco i tak powinno być — JavaScript jest jedną z najbardziej żywych technologii internetowych i kiedy zaczniesz się nią dobrze posługiwać to twoje witryny internetowe wejdą w nowy wymiar mocy i kreatywności.</p>
+            <code>var myHeading = document.querySelector('h1');
+                myHeading.textContent = 'Hello world!';</code>
+            <p>Powód, dla którego wstawiliśmy element (en-US) w dolnej części pliku HTML jest to, że elementy w HTML są ładowane przez przeglądarkę w kolejności pojawienia się ich w pliku. Jeśli JavaScript jest ładowany jako pierwszy i ma wpływać na HTML poniżej, może to nie zadziałać, ponieważ JavaScript byłby ładowany przed HTML na którym ma pracować. Dlatego umieszczenie kodu JavaScript w dolnej części strony HTML jest często najlepszą strategią.</p>
+        </section>
+        <section class="main-section" id="komentarze">
+            <header>Komentarze</header>
+            <p>Możesz umieścić komentarze w kodzie JavaScript, tak samo jak w CSS:</p>
+            <code>/*
+                Wszystko pomiędzy to komentarz.
+                */</code>
+            <p>Jeśli Twój komentarz nie zawiera przerw między wierszami, często łatwiej jest umieścić go za dwoma ukośnikami:</p>
+            <code>// To jest komentarz</code>
+        </section>
+        <section class="main-section" id="funkcje">
+            <header>Funkcje</header>
+            <p>Funkcje są sposobem na zapakowanie funkcjonalności, które chcesz wykorzystać ponownie. Gdy potrzebujesz procedury, zamiast pisać cały kod za każdym razem, możesz wywołać funkcję z nazwą funkcji. Powyżej widzieliście już niektóre zastosowania funkcji, na przykład:</p>
+                <code>var myVariable = document.querySelector('h1');</code>
+                <code>alert('hello!');</code>
+            <p>Funkcje te, document.querySelector i alert, są wbudowane w przeglądarkę, aby używać w dowolnym momencie.</p>
+            <p>Jeśli widzisz coś, co wygląda jak nazwa zmiennej, ale ma nawiasy — () — po niej, to prawdopodobnie jest to funkcja. Funkcje często biorą argumenty — bity danych potrzebne do wykonywania ich pracy. Znajdują się one w nawiasach, oddzielone przecinkami jeśli jest więcej niż jeden argument.</p>
+            <p>Na przykład, funkcja alert () powoduje pojawienie się okna podręcznego wewnątrz okna przeglądarki, ale musimy dać mu ciąg znaków jako argument, aby powiedzieć użytkownikowi o tym, co należy wyświetlić w wyskakującym okienku.</p>
+            <p>Dobrą wiadomością jest możliwość zdefiniowania własnych funkcji — w następnym przykładzie napiszemy prostą funkcję, która przyjmuje dwie liczby jako argumenty i mnoży je:</p>
+            <code>function multiply(num1,num2) {
+                var result = num1 * num2;
+                return result;
+              }</code>
+        
+        </section>
+        <section class="main-section" id="dodawanie_zmieniarki_obrazu">
+            <header>Dodawanie zmieniarki obrazu</header>
+            <p>W tej sekcji dodajemy dodatkowy obraz do naszej witryny, korzystając z kilku innych funkcji DOM API, używając JavaScript, aby przełączać się między nimi, gdy klikniesz obraz.</p>
+            <ul>
+                <li>Na samym początku znajdź inne zdjęcie, które chciałbyś pokazać na stronie. Upewnij się, że jest tego samego rozmiaru, co pierwsze - albo przynajmniej jak najbliżej się da.</li>
+                <li>Zachowaj zdjęcie w swoim katalogu images.</li>
+                <li>Nazwij je 'firefox2.png' (bez apostrofów).</li>
+                <li>Otwórz swój plik main.js, następnie dopisz następujący kod (jeżeli nadal znajduje się tam skrypt "witaj, świecie" - usuń go).</li>
+            </ul>
+            <code>var myImage = document.querySelector('img');
+
+                myImage.onclick = function() {
+                var mySrc = myImage.getAttribute('src');
+                if(mySrc === 'images/firefox-icon.png') {
+                    myImage.setAttribute ('src','images/firefox2.png');
+                    } else {
+                        myImage.setAttribute ('src','images/firefox-icon.png');
+                    }
+                }
+            </code>
+        </section>
+    </main>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* ---------- NAVBAR ---------- */
+#navbar{
+    position: fixed;
+    top:0;
+    left: 0;
+    bottom: 0;
+    width: 250px;
+    height: 100%;
+    border-right: 2px solid black;
+}
+#navbar > header {
+    text-align: center;
+    font-size: 28px;
+    padding: 20px 0px;
+    background-color: teal;
+    color: white;
+}
+#navbar > ul{
+    overflow-y: auto;
+    height: 90vh;
+}
+.nav-link {
+    color: black;
+    display: block;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-top: 1px solid black;
+    background-color: white;
+} 
+
+/* ---------- MAIN DOC ---------- */
+#main-doc{
+    margin-left: 260px;
+}
+.main-section > header {
+    font-weight: 700;
+    font-size: 26px;
+    margin: 10px 0 3px;
+    background-color:teal;
+    color: white;
+}
+.main-section > p {
+    margin: 10px 100px 10px 0px;
+}
+.main-section > ul {
+    margin-left: 20px;
+}
+.main-section li {
+    padding: 5px 0px;
+}
+code{
+    background-color: rgb(236, 236, 236);
+    white-space: pre-line;
+    display: block;
+    padding: 10px;
+    margin: 10px 0px;
+}
+
+@media (max-width:600px)  { 
+    /* ---------- NAVBAR ---------- */
+    #navbar{
+        position: fixed;
+        top:0;
+        width: 100%;
+        border-bottom: 1px solid black;
+        border-right: 0;
+    }
+    #navbar > ul{
+        overflow-y: auto;
+        height: 20vh;
+    }
+
+    #main-doc{
+        /* display: none; */
+        margin: 30vh 20px 2vh;
+    }
+    .main-section > p {
+        margin: 10px 0px 10px;
+    }
+}
